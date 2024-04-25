@@ -22,13 +22,6 @@ module tt_um_4mux1_example (
     wire  in4[3] = ui_in[5];       // Output port for 1Hz clock signal
     reg out_mux; 
     assign uo_out[0] = out_mux;
-    assign uo_out[1] = 0;
-    assign uo_out[2] = 0;
-    assign uo_out[3] = 0;
-    assign uo_out[4] = 0;
-    assign uo_out[5] = 0;
-    assign uo_out[6] = 0;
-    assign uo_out[7] = 0;
   
         always @(*) begin
             case (select)
