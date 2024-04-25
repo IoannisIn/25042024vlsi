@@ -29,16 +29,7 @@ module tt_um_4mux1_example (
     assign uo_out[5] = 0;
     assign uo_out[6] = 0;
     assign uo_out[7] = 0;
-
-    assign uio_in[0] = 0;
-    assign uio_in[1] = 0;
-    assign uio_in[2] = 0;
-    assign uio_in[3] = 0;
-    assign uio_in[4] = 0;
-    assign uio_in[5] = 0;
-    assign uio_in[6] = 0;
-    assign uio_in[7] = 0;
-    
+  
         always @(*) begin
             case (select)
                 2'h0: out_mux = in1;
