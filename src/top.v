@@ -21,16 +21,16 @@ module tt_4mux1_example (
   assign uio_out = 0;
   assign uio_oe  = 0;
 
-    wire  ui_in[0] = select[0];           // Output port for inled signal
-    wire  ui_in[1] = select[1];           // Output port for deled signal
-    wire  ui_in[2] = in1[0];             // Output port for led signal
-    wire  ui_in[3] = in1[1];       // Output port for 1Hz clock signal
-    wire  ui_in[4] = in1[2];             // Output port for led signal
-    wire  ui_in[5] = in1[3];       // Output port for 1Hz clock signal
-
+    wire  select[0] = ui_in[0];           // Output port for inled signal
+    wire  select[1] = ui_in[1];           // Output port for deled signal
+    wire  in1[0] = ui_in[2];             // Output port for led signal
+    wire  in1[1] = ui_in[3];       // Output port for 1Hz clock signal
+    wire  in1[2] = ui_in[4];             // Output port for led signal
+    wire  in1[3] = ui_in[5];       // Output port for 1Hz clock signal
+    reg out_mux; 
     assign uo_out[0] = out_mux;   
 
-    module mux_vlsi(
+    
         input [1:0] select,
         input [3:0] in1, in2, in3, in4,
         output reg out_mux);
@@ -44,6 +44,5 @@ module tt_4mux1_example (
                 default: out_mux = 0;
             endcase
         end   
-    endmodule   
-   
+    
 endmodule
