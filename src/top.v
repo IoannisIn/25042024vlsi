@@ -1,3 +1,6 @@
+
+`define default_netname none
+
 module tt_um_4mux1_example (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
@@ -21,7 +24,7 @@ module tt_um_4mux1_example (
     wire  in3[2] = ui_in[4];             // Output port for led signal
     wire  in4[3] = ui_in[5];       // Output port for 1Hz clock signal
     reg out_mux; 
-    assign uo_out[0] = out_mux;
+    assign uo_out ={7'b0, out_mux};
   
         always @(*) begin
             case (select)
