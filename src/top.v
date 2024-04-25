@@ -46,10 +46,6 @@ module tt_um_4mux1_example (
     assign uio_in[6] = 0;
     assign uio_in[7] = 0;
     
-        input [1:0] select,
-        input [3:0] in1, in2, in3, in4,
-        output reg out_mux);
-
         always @(*) begin
             case (select)
                 2'h0: out_mux = in1;
