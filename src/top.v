@@ -55,5 +55,5 @@ module tt_um_4mux1_example (
                 default: out_mux = 0;
             endcase
         end   
-    
+
 endmodule
