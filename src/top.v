@@ -24,9 +24,9 @@ module tt_um_4mux1_example (
     wire  select[0] = ui_in[0];           // Output port for inled signal
     wire  select[1] = ui_in[1];           // Output port for deled signal
     wire  in1[0] = ui_in[2];             // Output port for led signal
-    wire  in1[1] = ui_in[3];       // Output port for 1Hz clock signal
-    wire  in1[2] = ui_in[4];             // Output port for led signal
-    wire  in1[3] = ui_in[5];       // Output port for 1Hz clock signal
+    wire  in2[1] = ui_in[3];       // Output port for 1Hz clock signal
+    wire  in3[2] = ui_in[4];             // Output port for led signal
+    wire  in4[3] = ui_in[5];       // Output port for 1Hz clock signal
     reg out_mux; 
     assign uo_out[0] = out_mux;
     assign uo_out[1] = 0;
